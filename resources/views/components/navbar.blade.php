@@ -1,7 +1,9 @@
 <div>
-    <nav class="navbar navbar-expand-md navbar-light shadow-sm bg-white mb-4">
-        <div class="container">
-            <a class="navbar-brand" href="#">Abd. Asis</a>
+    <nav class="navbar navbar-expand-md navbar-light shadow-sm bg-white mb-4 navbar-custom">
+        <div class="container py-2">
+            <a class="navbar-brand kotak-logo" href="#">
+                <h1 class="">Abd. Asis</h1>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
