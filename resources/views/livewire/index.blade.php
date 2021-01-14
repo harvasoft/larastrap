@@ -2,7 +2,7 @@
     <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
             <h1 class="display-4 font-italic text-pembuka">Belajar Pemrograman Bareng Yuk</h1>
-            <p class="lead my-3">Belajar pemrograman itu nggak sulit loh, tapi bikin pusing dikit 😂</p>
+            <p class="lead">Belajar pemrograman itu nggak sulit loh, tapi bikin pusing dikit 😂</p>
             <button class="btn btn-light">Yuk memut bareng</button>
         </div>
     </div>
@@ -19,7 +19,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title font-semibold title-post">Hosting Terbaik Indonesia</h5>
-                            <div class="d-flex justify-content-between align-items-center my-3">
+                            <div class="d-flex justify-content-between align-items-center">
                                 <button class="btn btn-light">
                                     <i class="fa fa-mug-hot mr-1"></i> ngopi
                                 </button>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title font-semibold title-post">Hosting Terbaik Indonesia</h5>
-                            <div class="d-flex justify-content-between align-items-center my-3">
+                            <div class="d-flex justify-content-between align-items-center">
                                 <button class="btn btn-light">
                                     <i class="fa fa-mug-hot mr-1"></i> ngopi
                                 </button>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title font-semibold title-post">Hosting Terbaik Indonesia</h5>
-                            <div class="d-flex justify-content-between align-items-center my-3">
+                            <div class="d-flex justify-content-between align-items-center">
                                 <button class="btn btn-light">
                                     <i class="fa fa-mug-hot mr-1"></i> ngopi
                                 </button>
@@ -113,10 +113,10 @@
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow-sm">
-                <div class="card-header bg-white border-bottom">
-                    <h5>Populer Post</h5>
-                </div>
+            <div class="card shadow-sm border-0">
+                <h5 class="card-header bg-white border-bottom font-weight-bolder">
+                    Populer Post
+                </h5>
                 <div class="card-body">
                     <ul class="list-unstyled">
                         <li class="media mb-3">

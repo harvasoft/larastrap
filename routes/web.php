@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\Index;
+use App\Http\Livewire\Posts\Show;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', Index::class)->name('index');
-
+Route::get('detail-post', Show::class)->name('post.show');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
