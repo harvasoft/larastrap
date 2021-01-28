@@ -38,45 +38,19 @@
     <div class="row">
         <div class="col-md-8">
             <ul class="list-unstyled">
+                @foreach ($dataPost as $post)
                 <li class="media bg-white shadow-sm border-0 p-3">
                     <img height="50px" width="50px"
                         src="{{ $post['featured_image'] ?? 'https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709' }}"
                         class="mr-3 rounded-circle" alt="...">
                     <div class="media-body">
-                        <h5 class="mt-0 mb-1 title-post">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
-                        purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                        fringilla. Donec
-                        lacinia congue felis in faucibus.
+                        <a href="{{ route('post.show',$post['slug']) }}">
+                            <h5 class="card-title font-semibold title-post">{{ $post['title'] }}</h5>
+                        </a>
+                        {{ Str::limit(strip_tags($post['content']), 150, '...') }}
                     </div>
                 </li>
-                <li class="media bg-white shadow-sm border-0 p-3 my-4 ">
-                    <img height="50px" width="50px"
-                        src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
-                        class="mr-3 rounded-circle" alt="...">
-                    <div class="media-body">
-                        <h5 class="mt-0 mb-1 title-post">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
-                        purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                        fringilla. Donec
-                        lacinia congue felis in faucibus.
-                    </div>
-                </li>
-                <li class="media bg-white shadow-sm border-0 p-3">
-                    <img height="50px" width="50px"
-                        src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
-                        class="mr-3 rounded-circle" alt="...">
-                    <div class="media-body">
-                        <h5 class="mt-0 mb-1 title-post">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
-                        purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                        fringilla. Donec
-                        lacinia congue felis in faucibus.
-                    </div>
-                </li>
+                @endforeach
             </ul>
         </div>
 
@@ -87,46 +61,18 @@
                 </h5>
                 <div class="card-body">
                     <ul class="list-unstyled">
+                        @foreach ($dataPost as $post)
                         <li class="media mb-3">
                             <img height="30px" width="30px"
                                 src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
                                 class="align-self-start rounded-circle mr-3" alt="...">
                             <div class="media-body">
-                                <h5 class="mt-0 title-post">Top-aligned media</h5>
+                                <a href="{{ route('post.show',$post['slug']) }}">
+                                    <p class="card-title font-weight-light title-post">{{ $post['title'] }}</p>
+                                </a>
                             </div>
                         </li>
-                        <li class="media mb-3">
-                            <img height="30px" width="30px"
-                                src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
-                                class="align-self-start rounded-circle mr-3" alt="...">
-                            <div class="media-body">
-                                <h5 class="mt-0 title-post">Top-aligned media</h5>
-                            </div>
-                        </li>
-                        <li class="media mb-3">
-                            <img height="30px" width="30px"
-                                src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
-                                class="align-self-start rounded-circle mr-3" alt="...">
-                            <div class="media-body">
-                                <h5 class="mt-0 title-post">Top-aligned media</h5>
-                            </div>
-                        </li>
-                        <li class="media mb-3">
-                            <img height="30px" width="30px"
-                                src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
-                                class="align-self-start rounded-circle mr-3" alt="...">
-                            <div class="media-body">
-                                <h5 class="mt-0 title-post">Top-aligned media</h5>
-                            </div>
-                        </li>
-                        <li class="media mb-3">
-                            <img height="30px" width="30px"
-                                src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
-                                class="align-self-start rounded-circle mr-3" alt="...">
-                            <div class="media-body">
-                                <h5 class="mt-0 title-post">Top-aligned media</h5>
-                            </div>
-                        </li>
+                        @endforeach
 
                     </ul>
                 </div>

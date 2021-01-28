@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500&family=Lobster&family=Redressed&display=swap");
 
+a{
+    color: #F64747 !important;
+}
 .geeks {
     overflow: hidden;
     margin: 0 auto;
@@ -17,21 +20,20 @@
 
 .kotak-logo {
     position: relative;
-    background: orange;
+    background: #F64747;
     padding: 10px 20px;
     margin-top: -35px;
 }
 
 .kotak-logo h1 {
     color: #fff;
-    font-size: 28px;
-    font-weight: 900;
-    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 40px;
     font-family: "Lobster", cursive;
 }
-
 .navbar-custom {
-    border-top: 4px solid orange;
+    border-top: 4px solid #F64747;
 }
 
 .text-pembuka {
@@ -40,4 +42,15 @@
 
 .title-post {
     font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 500;
+}
+
+.single-post-title{
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 28px;
+}
+.single-featured-img{
+    height: 400px;
+    object-fit: cover;
+    object-position: center center;
 }

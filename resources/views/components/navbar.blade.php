@@ -1,7 +1,7 @@
 <div>
     <nav class="navbar navbar-expand-md navbar-light shadow-sm bg-white mb-4 navbar-custom">
-        <div class="container py-2">
-            <a class="navbar-brand kotak-logo" href="#">
+        <div class="container py-0">
+            <a class="navbar-brand kotak-logo" href="{{ url('/') }}">
                 <h1 class="">Abd. Asis</h1>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
