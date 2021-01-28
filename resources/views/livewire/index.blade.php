@@ -10,60 +10,28 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
+                @foreach ($dataPost as $post)
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm border-0">
                         <div class="geeks">
-                            <img class="card-img-top"
-                                src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
-                                alt="">
+                            <img class="card-img-top" src="{{ $post['featured_image'] }}" alt="">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title font-semibold title-post">Hosting Terbaik Indonesia</h5>
+                            <a href="{{ route('post.show',$post['slug']) }}">
+                                <h5 class="card-title font-semibold title-post">{{ $post['title'] }}</h5>
+                            </a>
                             <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-light">
+                                <button class="btn btn-sm">
                                     <i class="fa fa-mug-hot mr-1"></i> ngopi
+                                </button>
+                                <button class="btn btn-sm">
+                                    <i class="fa fa-user mr-1"></i> {{ $post['author']['name'] }}
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm border-0">
-                        <div class="geeks">
-                            <img class="card-img-top"
-                                src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
-                                alt="">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title font-semibold title-post">Hosting Terbaik Indonesia</h5>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-light">
-                                    <i class="fa fa-mug-hot mr-1"></i> ngopi
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm border-0">
-                        <div class="geeks">
-                            <img class="card-img-top"
-                                src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
-                                alt="">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title font-semibold title-post">Hosting Terbaik Indonesia</h5>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-light">
-                                    <i class="fa fa-mug-hot mr-1"></i> ngopi
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
         </div>
     </div>
@@ -72,7 +40,7 @@
             <ul class="list-unstyled">
                 <li class="media bg-white shadow-sm border-0 p-3">
                     <img height="50px" width="50px"
-                        src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
+                        src="{{ $post['featured_image'] ?? 'https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709' }}"
                         class="mr-3 rounded-circle" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1 title-post">List-based media object</h5>
