@@ -1,8 +1,8 @@
 <div>
-    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="jumbotron p-4 p-md-5 rounded relative">
         <div class="col-md-6 px-0">
-            <h1 class="display-4 font-italic text-pembuka">Belajar Pemrograman Bareng Yuk</h1>
-            <p class="lead">Belajar pemrograman itu nggak sulit loh, tapi bikin pusing dikit 😂</p>
+            <h1 class="display-5 font-italic">Belajar Pemrograman Bareng Yuk</h1>
+            <p class="lead">Belajar pemrograman itu nggak sulit loh, mungkin cuma bikin pusing dikit 😂</p>
             <button class="btn btn-light">Yuk memut bareng</button>
         </div>
     </div>
@@ -40,14 +40,18 @@
             @foreach ($dataPost as $post)
             <ul class="list-unstyled">
                 <li class="media bg-white shadow-sm border-0 p-3">
-                    <img height="50px" width="50px"
-                        src="{{ $post['featured_image'] ?? 'https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709' }}"
-                        class="mr-3 rounded-circle" alt="...">
+                    <img height="50px" width="50px" src="{{ $post['featured_image']}}"
+                        class="mr-3 rounded-circle small-image-rouded" alt="...">
                     <div class="media-body">
                         <a href="{{ route('post.show',$post['slug']) }}">
                             <h5 class="card-title font-semibold title-post">{{ $post['title'] }}</h5>
                         </a>
-                        {{ Str::limit(strip_tags($post['content']), 150, '...') }}
+                        <div class="conten-wrapper">
+                            {{ Str::limit(strip_tags($post['content']), 150, '...') }}
+                        </div>
+                        <div class="meta-wrapper">
+
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -63,9 +67,8 @@
                     <ul class="list-unstyled">
                         @foreach ($dataPost as $post)
                         <li class="media mb-3">
-                            <img height="30px" width="30px"
-                                src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709"
-                                class="align-self-start rounded-circle mr-3" alt="...">
+                            <img height="30px" width="30px" src="{{ $post['featured_image'] }}"
+                                class="align-self-start rounded-circle mr-3 small-image-rouded" alt="...">
                             <div class="media-body">
                                 <a href="{{ route('post.show',$post['slug']) }}">
                                     <p class="card-title font-weight-light title-post">{{ $post['title'] }}</p>

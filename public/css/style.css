@@ -104,3 +104,7 @@ body::-webkit-scrollbar-thumb {
 ::-webkit-scrollbar-thumb:hover {
     background: #BFC0C1;
 }
+
+.small-image-rouded{
+    object-fit: cover;
+}
