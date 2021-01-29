@@ -22,7 +22,8 @@
                             </a>
                             <div class="d-flex justify-content-between align-items-center">
                                 <button class="btn btn-sm">
-                                    <i class="fa fa-mug-hot mr-1"></i> ngopi
+                                    <i class="fa fa-calendar-alt mr-1"></i>
+                                    {{ Carbon\Carbon::parse($post['modified'])->format('d-m-Y') }}
                                 </button>
                                 <button class="btn btn-sm">
                                     <i class="fa fa-user mr-1"></i> {{ $post['author']['name'] }}
@@ -92,6 +93,16 @@
 
 
 
+@push('js')
+<script id="dsq-count-scr" src="//https-abdasis-my-id.disqus.com/count.js" async></script>
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://abdasis.my.id'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = this.dataset.disqus-identifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    }
+</script>
+
+@endpush
 @section('title')
 Abd. Asis | The Journey To Great Programmer
 @endsection
