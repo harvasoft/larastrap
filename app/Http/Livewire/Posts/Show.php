@@ -16,6 +16,7 @@ class Show extends Component
     public function render()
     {
         $dataPost = Http::withToken(env('WP_TOKEN'))->get('https://public-api.wordpress.com/rest/v1.1/sites/idabdasis.wordpress.com/posts/slug:' . $this->slug)->json();
+        // dd($dataPost);
         return view('livewire.posts.show', [
             'post' => $dataPost
         ]);

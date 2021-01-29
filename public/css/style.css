@@ -54,3 +54,53 @@ a{
     object-fit: cover;
     object-position: center center;
 }
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: F0F2F5;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    /* color of the scroll thumb */
+    border-radius: 5px;
+    /* roundness of the scroll thumb */
+    /* creates padding around scroll thumb */
+}
+
+
+/* width */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #BFC0C1;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #BFC0C1;
+}

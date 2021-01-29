@@ -37,8 +37,8 @@
     </div>
     <div class="row">
         <div class="col-md-8">
+            @foreach ($dataPost as $post)
             <ul class="list-unstyled">
-                @foreach ($dataPost as $post)
                 <li class="media bg-white shadow-sm border-0 p-3">
                     <img height="50px" width="50px"
                         src="{{ $post['featured_image'] ?? 'https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&ssl=1?resize=1400%2C709' }}"
@@ -50,8 +50,8 @@
                         {{ Str::limit(strip_tags($post['content']), 150, '...') }}
                     </div>
                 </li>
-                @endforeach
             </ul>
+            @endforeach
         </div>
 
         <div class="col-md-4">
