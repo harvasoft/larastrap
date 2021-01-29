@@ -16,10 +16,30 @@
                     </div>
                 </div>
             </div>
+            <div class="box-penulis">
+                <div class="card shadow-sm border-0 mb-3">
+                    <div class="card-header bg-white border-0">Tentang Penulis</div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="media mb-3">
+                                <img height="60px" width="60px" src="{{ $post['author']['avatar_URL'] }}"
+                                    class="align-self-start rounded-circle mr-3 small-image-rouded" alt="...">
+                                <div class="media-body">
+                                    <a href="https://facebook.com/abdasispif">
+                                        <p class="card-title font-weight-light title-post">{{ $post['author']['name'] }}
+                                            <i class="fa fa-check-circle text-primary"></i> </p>
+                                    </a>
+                                    <p>Pecinta pemadangan alam, tapi tidak suka jalan-jalan</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="box-komentar">
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-body">
-                        <div id="graphcomment"></div>
+                        <div id="disqus_thread"></div>
                     </div>
                 </div>
             </div>
@@ -28,26 +48,28 @@
 </div>
 
 @push('js')
-<script type="text/javascript">
-    /* - - - CONFIGURATION VARIABLES - - - */
-
-      // make sure the id is yours
-      window.gc_params = {
-        graphcomment_id: 'abdasis',
-
-        // if your website has a fixed header, indicate it's height in pixels
-        fixed_header_height: 0,
-      };
-
-      /* - - - DON'T EDIT BELOW THIS LINE - - - */
-
-
-      (function() {
-        var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
-        gc.src = 'https://graphcomment.com/js/integration.js?' + Math.round(Math.random() * 1e8);
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
-      })();
-
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-abdasis-my-id.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
 
 @endpush
+
+@section('title')
+{{ $post['title'] }} - Abd. Asis
+@endsection
