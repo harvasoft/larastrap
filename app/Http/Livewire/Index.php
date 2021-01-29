@@ -18,11 +18,13 @@ class Index extends Component
     }
     public function render()
     {
-        $responsPost = Http::withToken(env('WP_TOKEN'))->get('https://public-api.wordpress.com/rest/v1.1/sites/idabdasis.wordpress.com/posts')->json('posts');
-        $dataPost = $this->paginate($responsPost);
+        $dataPost = Http::withToken(env('WP_TOKEN'))->get('https://public-api.wordpress.com/rest/v1.1/sites/idabdasis.wordpress.com/posts')->json('posts');
+        $dataRow = Http::withToken(env('WP_TOKEN'))->get('https://public-api.wordpress.com/rest/v1.1/sites/idabdasis.wordpress.com/posts')->json('posts');
+        $postRow = $this->paginate($dataRow);
         // dd($dataPost);
         return view('livewire.index', [
             'dataPost' => $dataPost,
+            'dataPostRow' => $postRow
         ]);
     }
 }

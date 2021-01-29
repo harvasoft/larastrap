@@ -37,17 +37,17 @@
     </div>
     <div class="row">
         <div class="col-md-8">
-            @foreach ($dataPost as $post)
+            @foreach ($dataPostRow as $postRow)
             <ul class="list-unstyled">
                 <li class="media bg-white shadow-sm border-0 p-3">
-                    <img height="50px" width="50px" src="{{ $post['featured_image']}}"
+                    <img height="50px" width="50px" src="{{ $postRow['featured_image']}}"
                         class="mr-3 rounded-circle small-image-rouded" alt="...">
                     <div class="media-body">
-                        <a href="{{ route('post.show',$post['slug']) }}">
-                            <h5 class="card-title font-semibold title-post">{{ $post['title'] }}</h5>
+                        <a href="{{ route('post.show',$postRow['slug']) }}">
+                            <h5 class="card-title font-semibold title-post">{{ $postRow['title'] }}</h5>
                         </a>
                         <div class="conten-wrapper">
-                            {{ Str::limit(strip_tags($post['content']), 150, '...') }}
+                            {{ Str::limit(strip_tags($postRow['content']), 150, '...') }}
                         </div>
                         <div class="meta-wrapper">
 
@@ -56,7 +56,11 @@
                 </li>
             </ul>
             @endforeach
+
+            {{ $dataPostRow->links() }}
         </div>
+
+
 
         <div class="col-md-4">
             <div class="card shadow-sm border-0">
@@ -80,6 +84,8 @@
                     </ul>
                 </div>
             </div>
+
+
         </div>
     </div>
 </div>
