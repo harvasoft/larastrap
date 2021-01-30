@@ -121,3 +121,11 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid red !important;
     display: none !important;
 }
+
+
+.syntaxhighlighter {
+    background-color: white !important;
+    border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 3px;
+}
