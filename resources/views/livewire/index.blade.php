@@ -14,7 +14,7 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm border-0">
                         <div class="geeks">
-                            <img class="card-img-top" src="{{ $post['featured_image'] }}" alt="">
+                            <img class="card-img-top card-image-fill" src="{{ $post['featured_image'] }}" alt="">
                         </div>
                         <div class="card-body">
                             <a href="{{ route('post.show',$post['slug']) }}">
