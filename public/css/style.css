@@ -113,3 +113,11 @@ body::-webkit-scrollbar-thumb {
 .card-image-fill{
     object-fit: fill;
 }
+
+
+.syntaxhighlighter .toolbar {
+    color: #a0a0a0 !important;
+    background: #d4d0c8 !important;
+    border: 1px solid red !important;
+    display: none !important;
+}
