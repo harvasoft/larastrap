@@ -1,5 +1,5 @@
 <div>
-    <nav class="navbar navbar-expand-md navbar-light shadow-sm bg-white mb-4 navbar-custom">
+    <nav class="navbar navbar-expand-md navbar-light shadow-sm bg-white navbar-custom">
         <div class="container py-0">
             <a class="navbar-brand kotak-logo" href="{{ url('/') }}">
                 <h1 class="">Abd. Asis</h1>

@@ -1,12 +1,4 @@
 <div>
-    <div class="jumbotron p-4 p-md-5 rounded relative">
-        <div class="col-md-6 px-0">
-            <h1 class="display-5 font-italic">Belajar Pemrograman Bareng Yuk</h1>
-            <p class="lead">Belajar pemrograman itu nggak sulit loh, mungkin cuma bikin pusing dikit 😂</p>
-            <button class="btn btn-light">Yuk memut bareng</button>
-        </div>
-    </div>
-
     <div class="row">
         <div class="col-md-12">
             <div class="row">
@@ -105,4 +97,14 @@
 @endpush
 @section('title')
 Abd. Asis | The Journey To Great Programmer
+@endsection
+
+@section('jumbutron')
+<div class="jumbotron p-4 p-md-5 rounded relative">
+    <div class="col-md-6 px-0">
+        <h1 class="display-5 font-italic">Belajar Pemrograman Bareng Yuk</h1>
+        <p class="lead">Belajar pemrograman itu nggak sulit loh, mungkin cuma bikin pusing dikit 😂</p>
+        <button class="btn btn-light">Yuk memut bareng</button>
+    </div>
+</div>
 @endsection
