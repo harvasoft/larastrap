@@ -2,7 +2,7 @@
     <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
             <h1 class="display-4 font-italic text-pembuka">Belajar Pemrograman Bareng Yuk</h1>
-            <p class="lead my-3">Belajar pemrograman itu nggak sulit loh, tapi bikin pusing dikit 😂</p>
+            <p class="lead">Belajar pemrograman itu nggak sulit loh, tapi bikin pusing dikit 😂</p>
             <button class="btn btn-light">Yuk memut bareng</button>
         </div>
     </div>
@@ -19,10 +19,9 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title font-semibold title-post">Hosting Terbaik Indonesia</h5>
-                            <div class="d-flex justify-content-between align-items-center my-3">
-                                <button class="btn btn-light">
-                                    <i class="fa fa-mug-hot mr-1"></i> ngopi
-                                </button>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span><i class="fa fa-mug-hot mr-1"></i> 23</span>
+                                <span><i class="fa fa-comment mr-1"></i>410</span>
                             </div>
                         </div>
                     </div>
@@ -37,10 +36,9 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title font-semibold title-post">Hosting Terbaik Indonesia</h5>
-                            <div class="d-flex justify-content-between align-items-center my-3">
-                                <button class="btn btn-light">
-                                    <i class="fa fa-mug-hot mr-1"></i> ngopi
-                                </button>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span><i class="fa fa-mug-hot mr-1"></i> 23</span>
+                                <span><i class="fa fa-comment mr-1"></i>410</span>
                             </div>
                         </div>
                     </div>
@@ -55,10 +53,9 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title font-semibold title-post">Hosting Terbaik Indonesia</h5>
-                            <div class="d-flex justify-content-between align-items-center my-3">
-                                <button class="btn btn-light">
-                                    <i class="fa fa-mug-hot mr-1"></i> ngopi
-                                </button>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span><i class="fa fa-mug-hot mr-1"></i> 23</span>
+                                <span><i class="fa fa-comment mr-1"></i>410</span>
                             </div>
                         </div>
                     </div>
@@ -76,11 +73,13 @@
                         class="mr-3 rounded-circle" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1 title-post">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
-                        purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                        fringilla. Donec
-                        lacinia congue felis in faucibus.
+                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                            Cras
+                            purus odio,
+                            vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                            fringilla. Donec
+                            lacinia congue felis in faucibus.
+                        </p>
                     </div>
                 </li>
                 <li class="media bg-white shadow-sm border-0 p-3 my-4 ">
@@ -89,11 +88,14 @@
                         class="mr-3 rounded-circle" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1 title-post">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
-                        purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                        fringilla. Donec
-                        lacinia congue felis in faucibus.
+                        <p>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                            Cras
+                            purus odio,
+                            vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                            fringilla. Donec
+                            lacinia congue felis in faucibus.
+                        </p>
                     </div>
                 </li>
                 <li class="media bg-white shadow-sm border-0 p-3">
@@ -102,11 +104,13 @@
                         class="mr-3 rounded-circle" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1 title-post">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
-                        purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                        fringilla. Donec
-                        lacinia congue felis in faucibus.
+                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                            Cras
+                            purus odio,
+                            vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                            fringilla. Donec
+                            lacinia congue felis in faucibus.
+                        </p>
                     </div>
                 </li>
             </ul>
