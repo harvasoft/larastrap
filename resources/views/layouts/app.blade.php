@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -20,6 +20,9 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+
     @livewireStyles
     @stack('css')
     <style>
@@ -33,25 +36,25 @@
 </head>
 
 <body class="font-sans antialiased">
-    @component('components.navbar')
-
-    @endcomponent
+    <x-navbar />
+    @yield('jumbutron')
     <div class="container">
         {{ $slot }}
     </div>
-    <footer class="footer bg-white mt-auto py-3">
+    <footer class="footer bg-white py-3 mt-4">
         <div class="container">
-            <span class="text-muted">Place sticky footer content here.</span>
+            <span class="text-muted">{{ date('Y') }} Made With <i class="fa fa-heart text-danger"></i> By Abd. Asis.
+            </span>
         </div>
     </footer>
+
     @livewireScripts
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js"
+        data-turbolinks-eval="false" data-turbo-eval="false"></script>
     @stack('js')
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
+
 </body>
 
 </html>

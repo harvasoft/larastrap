@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\View\Component;
 
 class navbar extends Component
@@ -13,7 +14,6 @@ class navbar extends Component
      */
     public function __construct()
     {
-        //
     }
 
     /**
@@ -23,6 +23,13 @@ class navbar extends Component
      */
     public function render()
     {
-        return view('components.navbar');
+        $dataKategori = Http::withToken(env('WP_TOKEN'))->get('https://public-api.wordpress.com/rest/v1.1/sites/idabdasis.wordpress.com/categories')->json('categories');
+        $filterred = collect($dataKategori)->whereNotIn('slug', 'tidak-dikategorikan')->forPage(0, 5);
+        // dd($filterred);
+        return view('components.navbar', [
+            // title site
+            'site' => 'Abd. Asis',
+            'dataKategori' => $filterred
+        ]);
     }
 }
