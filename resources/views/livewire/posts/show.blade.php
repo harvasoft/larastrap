@@ -110,10 +110,7 @@
 
 @push('css')
 <link href='https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css' rel='stylesheet' />
-<link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreDefault.min.css"
-    integrity="sha512-m86ay46+VXJi/u/ARTNMtfjIXdW6ht5LULFIK1GvPRobUlQgRdZTs7f105BDB8pzFCxk/6nq5otE9j12Onkyow=="
-    crossorigin="anonymous" />
+<link rel="stylesheet" href="{{ asset('css/shCoreDefault.css') }}" />
 @endpush
 
 
