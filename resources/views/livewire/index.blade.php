@@ -10,14 +10,12 @@
                     <a href="{{ route('post.show',$post['slug']) }}">
                         <h5 class="card-title font-semibold title-post">{{ $post['title'] }}</h5>
                     </a>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn btn-sm">
-                            <i class="fa fa-calendar-alt mr-1"></i>
-                            {{ Carbon\Carbon::parse($post['modified'])->format('d-m-Y') }}
-                        </button>
-                        <button class="btn btn-sm">
+                    <div class="d-flex p-0 justify-content-between">
+                        <span><i class="fa fa-calendar-alt mr-1"></i>
+                            {{ Carbon\Carbon::parse($post['modified'])->format('d-m-Y') }}</span>
+                        <span>
                             <i class="fa fa-user mr-1"></i> {{ $post['author']['name'] }}
-                        </button>
+                        </span>
                     </div>
                 </div>
             </div>
