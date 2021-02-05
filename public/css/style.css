@@ -129,3 +129,8 @@ body::-webkit-scrollbar-thumb {
     padding: 8px;
     border-radius: 3px;
 }
+
+.wp-block-code{
+    background: #f0f0f0;
+    padding: 8px;
+}

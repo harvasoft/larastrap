@@ -10,7 +10,7 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
+    <meta name="turbolinks-visit-control" content="reload">
     <!-- Styles -->
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -43,15 +43,17 @@
     </div>
     <footer class="footer bg-white py-3 mt-4">
         <div class="container">
-            <span class="text-muted">{{ date('Y') }} Made With <i class="fa fa-heart text-danger"></i> By Abd. Asis.
+            <span class="text-muted">2020 - {{ date('Y') }} Made With <i class="fa fa-heart text-danger"></i> By Abd.
+                Asis.
             </span>
         </div>
     </footer>
 
     @livewireScripts
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js"
+    <script defer src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js"
+        data-turbolinks-eval="false" data-turbo-eval="false"></script>
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"
         data-turbolinks-eval="false" data-turbo-eval="false"></script>
     @stack('js')
 

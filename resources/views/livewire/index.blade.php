@@ -7,7 +7,7 @@
                     <img class="card-img-top card-image-fill" src="{{ $post['featured_image'] }}" alt="">
                 </div>
                 <div class="card-body">
-                    <a href="{{ route('post.show',$post['slug']) }}">
+                    <a href="{{ route('post.show',$post['slug']) }}" data-turbolinks-action="replace">
                         <h5 class="card-title font-semibold title-post">{{ $post['title'] }}</h5>
                     </a>
                     <div class="d-flex p-0 justify-content-between">
@@ -30,7 +30,7 @@
                     <img height="50px" width="50px" src="{{ $postRow['featured_image']}}"
                         class="mr-3 rounded-circle small-image-rouded" alt="...">
                     <div class="media-body">
-                        <a href="{{ route('post.show',$postRow['slug']) }}">
+                        <a href="{{ route('post.show',$postRow['slug']) }}" data-turbolinks-action="replace">
                             <h5 class="card-title font-semibold title-post">{{ $postRow['title'] }}</h5>
                         </a>
                         <div class="conten-wrapper">
@@ -59,7 +59,7 @@
                             <img height="30px" width="30px" src="{{ $post['featured_image'] }}"
                                 class="align-self-start rounded-circle mr-3 small-image-rouded" alt="...">
                             <div class="media-body">
-                                <a href="{{ route('post.show',$post['slug']) }}">
+                                <a href="{{ route('post.show',$post['slug']) }}" data-turbolinks-action="replace">
                                     <p class="card-title font-weight-light title-post">{{ $post['title'] }}</p>
                                 </a>
                             </div>
