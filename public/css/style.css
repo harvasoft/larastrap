@@ -50,8 +50,8 @@ a{
     font-size: 28px;
 }
 .single-featured-img{
-    height: 400px;
-    object-fit: fill;
+    height: 450px;
+    object-fit: cover;
     object-position: center center;
 }
 body::-webkit-scrollbar {
@@ -111,7 +111,8 @@ body::-webkit-scrollbar-thumb {
 
 
 .card-image-fill{
-    object-fit: fill;
+    height: 235px !important;
+    object-fit: cover;
 }
 
 
